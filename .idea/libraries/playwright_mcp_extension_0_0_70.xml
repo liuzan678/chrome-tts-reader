@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="playwright-mcp-extension-0.0.70">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/.codex-tools/playwright-mcp-extension-0.0.70.zip!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
