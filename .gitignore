@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+coverage/
+
+# Temporary files
+tmp/
+
+# Local tool directories
+.claude/
+.codex-tools/
+.playwright-mcp/
+
+# OS files
+.DS_Store

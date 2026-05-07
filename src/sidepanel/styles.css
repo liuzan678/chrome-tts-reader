@@ -1,0 +1,139 @@
+:root {
+  color: #241c15;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  line-height: 1.4;
+  background:
+    radial-gradient(circle at top left, rgba(255, 232, 204, 0.9), transparent 48%),
+    linear-gradient(180deg, #fff8ee 0%, #f6efe4 100%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.panel {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 18px;
+}
+
+.eyebrow {
+  color: #8d5f32;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 10px 0 8px;
+}
+
+.meta {
+  color: #6d5b4e;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.pill {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(161, 129, 96, 0.28);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.controls,
+.settings {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(161, 129, 96, 0.2);
+  border-radius: 18px;
+  margin-bottom: 14px;
+  padding: 14px;
+}
+
+.button-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+button,
+select,
+input[type="range"] {
+  font: inherit;
+}
+
+button {
+  background: linear-gradient(180deg, #fffaf3 0%, #f2ddc0 100%);
+  border: 1px solid rgba(128, 97, 61, 0.24);
+  border-radius: 12px;
+  color: #241c15;
+  cursor: pointer;
+  padding: 10px 12px;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+}
+
+.full {
+  grid-column: 1 / -1;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.field:last-child {
+  margin-bottom: 0;
+}
+
+.range-row {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr auto;
+}
+
+.error {
+  background: rgba(181, 54, 38, 0.08);
+  border: 1px solid rgba(181, 54, 38, 0.15);
+  border-radius: 14px;
+  color: #8d2f24;
+  display: none;
+  font-size: 13px;
+  margin-top: 16px;
+  padding: 12px;
+}
+
+.error.is-visible {
+  display: block;
+}

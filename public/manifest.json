@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome TTS Reader",
+  "version": "0.1.0",
+  "description": "Read selected text or article-like page content aloud with a side panel controller.",
+  "minimum_chrome_version": "114",
+  "permissions": ["contextMenus", "sidePanel", "storage", "tabs", "tts"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open Chrome TTS Reader"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "commands": {
+    "toggle-playback": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Space",
+        "mac": "Command+Shift+Space"
+      },
+      "description": "Toggle play or pause"
+    },
+    "next-paragraph": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Period",
+        "mac": "Command+Shift+Period"
+      },
+      "description": "Read the next paragraph"
+    },
+    "previous-paragraph": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Comma",
+        "mac": "Command+Shift+Comma"
+      },
+      "description": "Read the previous paragraph"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
