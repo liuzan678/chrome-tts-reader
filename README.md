@@ -22,17 +22,31 @@ Chrome TTS Reader is built for reading articles, blogs, and documentation pages 
 
 ## Screenshots
 
-Add screenshots at the following paths to enable the reserved README image references:
+A quick look at the extension workflow and reader controls.
 
-- `./docs/images/hero.png`
-- `./docs/images/sidepanel.png`
-- `./docs/images/highlight.png`
+### Overview
 
-Suggested captures:
+A high-level view of the project and extension experience.
 
-- `hero.png`: repository or extension overview
-- `sidepanel.png`: side panel controls
-- `highlight.png`: active paragraph highlight on the page
+![Chrome TTS Reader overview](./docs/images/hero.png)
+
+### Side panel controls
+
+The persistent side panel keeps playback actions and reading status within reach.
+
+![Chrome TTS Reader side panel controls](./docs/images/sidepanel.png)
+
+### Voice / timbre settings
+
+Switch available voices and adjust the reading speed to match your preference.
+
+![Chrome TTS Reader voice and timbre settings](./docs/images/timbre.png)
+
+### Active paragraph highlighting
+
+The current paragraph is highlighted on the page while playback moves forward.
+
+![Chrome TTS Reader active paragraph highlighting](./docs/images/highlight.png)
 
 ## Installation
 
@@ -188,17 +202,31 @@ Chrome TTS Reader 主要面向文章、博客和文档页面阅读场景，流�
 
 ## 截图
 
-请将截图放到以下路径，以启用 README 中预留的图片引用位置：
+下面这些截图展示了扩展的主要阅读流程和控制界面。
 
-- `./docs/images/hero.png`
-- `./docs/images/sidepanel.png`
-- `./docs/images/highlight.png`
+### 整体预览
 
-建议对应内容如下：
+用于快速了解项目和扩展的整体使用体验。
 
-- `hero.png`：项目或扩展整体展示图
-- `sidepanel.png`：侧边栏控制界面
-- `highlight.png`：页面内当前段落高亮效果
+![Chrome TTS Reader 整体预览](./docs/images/hero.png)
+
+### 侧边栏控制
+
+常驻侧边栏提供播放控制、阅读状态和当前进度信息。
+
+![Chrome TTS Reader 侧边栏控制](./docs/images/sidepanel.png)
+
+### 语音 / 音色设置
+
+可切换可用 voice，并按偏好调整朗读速度。
+
+![Chrome TTS Reader 语音与音色设置](./docs/images/timbre.png)
+
+### 当前段落高亮
+
+播放过程中，页面中的当前段落会同步高亮显示。
+
+![Chrome TTS Reader 当前段落高亮](./docs/images/highlight.png)
 
 ## 安装
 
