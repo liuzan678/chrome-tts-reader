@@ -174,9 +174,8 @@ tests/             Unit tests for playback, extraction, picking, and shared logi
 
 ## License
 
-A license file is not included in this repository yet.
-
-If you plan to publish this project publicly on GitHub for reuse or contributions, add a license before wider distribution.
+Chrome TTS Reader is licensed under the Apache License 2.0.
+See [LICENSE](./LICENSE) for the full license text.
 
 ---
 
@@ -354,6 +353,5 @@ tests/             播放、提取、选择和共享逻辑相关测试
 
 ## License
 
-当前仓库尚未包含 license 文件。
-
-如果你准备将这个项目公开发布到 GitHub 并接受复用或贡献，建议在更广泛分发前补充 license。
+本项目采用 Apache License 2.0 许可协议。
+完整内容见 [LICENSE](./LICENSE)。
