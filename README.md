@@ -1,183 +1,4 @@
-[English](#english) | [中文](#chinese)
-
-<a id="english"></a>
-
-# Chrome TTS Reader
-
-A Manifest V3 Chrome extension that reads selected text or article-like page content aloud with persistent side panel controls.
-
-Chrome TTS Reader is built for reading articles, blogs, and documentation pages with a workflow that stays lightweight: open the side panel, load the current page, listen paragraph by paragraph, and resume where you left off.
-
-## Highlights
-
-- Read selected text from the browser context menu
-- Read article-like page content from the side panel
-- Keep playback controls available in a persistent side panel
-- Jump to the next or previous paragraph
-- Pick a custom start position directly on the page
-- Change voice and speech rate
-- Highlight the active paragraph while reading
-- Resume from the last paragraph on the same URL
-- Use keyboard shortcuts for common playback actions
-
-## Screenshots
-
-A quick look at the extension workflow and reader controls.
-
-### Overview
-
-A high-level view of the project and extension experience.
-
-![Chrome TTS Reader overview](./docs/images/hero.png)
-
-### Side panel controls
-
-The persistent side panel keeps playback actions and reading status within reach.
-
-![Chrome TTS Reader side panel controls](./docs/images/sidepanel.png)
-
-### Voice / timbre settings
-
-Switch available voices and adjust the reading speed to match your preference.
-
-![Chrome TTS Reader voice and timbre settings](./docs/images/timbre.png)
-
-### Active paragraph highlighting
-
-The current paragraph is highlighted on the page while playback moves forward.
-
-![Chrome TTS Reader active paragraph highlighting](./docs/images/highlight.png)
-
-## Installation
-
-### Install from Release or Chrome Web Store
-
-Distribution channels are not published yet.
-
-- GitHub Releases: coming soon
-- Chrome Web Store: coming soon
-
-Until packaged releases are available, use the source installation flow below.
-
-### Build from Source
-
-#### Requirements
-
-- Chrome 114 or later
-- Node.js and npm
-
-#### Steps
-
-1. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-2. Build the extension:
-
-   ```bash
-   npm run build
-   ```
-
-3. Open `chrome://extensions` in Chrome.
-4. Enable **Developer mode**.
-5. Click **Load unpacked**.
-6. Select the `dist/` directory.
-
-## Usage
-
-### Read the current page
-
-1. Click the extension action.
-2. The side panel opens automatically.
-3. Click **Read Current Page**.
-4. Use **Play**, **Pause**, **Stop**, **Previous**, and **Next** to control playback.
-
-### Read selected text
-
-1. Select text on a supported page.
-2. Right-click the selection.
-3. Choose **Read selected text**.
-
-### Pick a custom start position
-
-1. Open the side panel.
-2. Click **Pick Start Position**.
-3. Click the paragraph where reading should begin.
-
-### Adjust playback
-
-- Choose a voice from the voice selector
-- Change reading speed with the rate slider
-- Reopen the same page later to continue from the saved paragraph
-
-## Keyboard Shortcuts
-
-| Action | Windows / Linux | macOS |
-| --- | --- | --- |
-| Toggle play or pause | `Ctrl+Shift+Space` | `Command+Shift+Space` |
-| Next paragraph | `Ctrl+Shift+.` | `Command+Shift+.` |
-| Previous paragraph | `Ctrl+Shift+,` | `Command+Shift+,` |
-
-## How It Works
-
-Chrome TTS Reader uses a standard Manifest V3 split:
-
-- `background` service worker manages playback state, Chrome TTS integration, shortcuts, and context menu actions
-- `content` script extracts readable text, supports start-position picking, and manages in-page highlighting
-- `sidepanel` UI provides persistent controls for reading and playback settings
-- `shared` modules keep contracts, storage helpers, and text utilities consistent across extension parts
-
-## Project Structure
-
-```text
-public/            Static extension assets, including the manifest
-src/background/    Service worker and playback orchestration
-src/content/       Text extraction, highlight, and start-position picking
-src/sidepanel/     Side panel UI and interactions
-src/shared/        Shared contracts, storage helpers, and utilities
-tests/             Unit tests for playback, extraction, picking, and shared logic
-```
-
-## Development
-
-### Commands
-
-- `npm run build` — build the unpacked extension into `dist/`
-- `npm run dev` — rebuild on file changes
-- `npm test` — run the test suite
-
-### Stack
-
-- TypeScript
-- Vite
-- Vitest
-- Chrome Extensions Manifest V3
-- `@mozilla/readability` for article-style extraction support
-
-## Limitations
-
-- Chrome only for now
-- Best suited to article, blog, and documentation pages
-- Heuristic extraction may be less accurate on highly dynamic or app-like pages
-- Restricted pages such as `chrome://` are not supported
-- No cloud TTS providers
-- No AI summarization, translation, or rewriting
-
-## Roadmap
-
-- Publish packaged releases for easier installation
-- Prepare Chrome Web Store distribution
-- Improve extraction quality on more complex layouts
-- Expand compatibility across a broader range of content-heavy pages
-
-## License
-
-Chrome TTS Reader is licensed under the Apache License 2.0.
-See [LICENSE](./LICENSE) for the full license text.
-
----
+[中文](#chinese) | [English](#english)
 
 <a id="chinese"></a>
 
@@ -355,3 +176,182 @@ tests/             播放、提取、选择和共享逻辑相关测试
 
 本项目采用 Apache License 2.0 许可协议。
 完整内容见 [LICENSE](./LICENSE)。
+
+---
+
+<a id="english"></a>
+
+# Chrome TTS Reader
+
+A Manifest V3 Chrome extension that reads selected text or article-like page content aloud with persistent side panel controls.
+
+Chrome TTS Reader is built for reading articles, blogs, and documentation pages with a workflow that stays lightweight: open the side panel, load the current page, listen paragraph by paragraph, and resume where you left off.
+
+## Highlights
+
+- Read selected text from the browser context menu
+- Read article-like page content from the side panel
+- Keep playback controls available in a persistent side panel
+- Jump to the next or previous paragraph
+- Pick a custom start position directly on the page
+- Change voice and speech rate
+- Highlight the active paragraph while reading
+- Resume from the last paragraph on the same URL
+- Use keyboard shortcuts for common playback actions
+
+## Screenshots
+
+A quick look at the extension workflow and reader controls.
+
+### Overview
+
+A high-level view of the project and extension experience.
+
+![Chrome TTS Reader overview](./docs/images/hero.png)
+
+### Side panel controls
+
+The persistent side panel keeps playback actions and reading status within reach.
+
+![Chrome TTS Reader side panel controls](./docs/images/sidepanel.png)
+
+### Voice / timbre settings
+
+Switch available voices and adjust the reading speed to match your preference.
+
+![Chrome TTS Reader voice and timbre settings](./docs/images/timbre.png)
+
+### Active paragraph highlighting
+
+The current paragraph is highlighted on the page while playback moves forward.
+
+![Chrome TTS Reader active paragraph highlighting](./docs/images/highlight.png)
+
+## Installation
+
+### Install from Release or Chrome Web Store
+
+Distribution channels are not published yet.
+
+- GitHub Releases: coming soon
+- Chrome Web Store: coming soon
+
+Until packaged releases are available, use the source installation flow below.
+
+### Build from Source
+
+#### Requirements
+
+- Chrome 114 or later
+- Node.js and npm
+
+#### Steps
+
+1. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+2. Build the extension:
+
+   ```bash
+   npm run build
+   ```
+
+3. Open `chrome://extensions` in Chrome.
+4. Enable **Developer mode**.
+5. Click **Load unpacked**.
+6. Select the `dist/` directory.
+
+## Usage
+
+### Read the current page
+
+1. Click the extension action.
+2. The side panel opens automatically.
+3. Click **Read Current Page**.
+4. Use **Play**, **Pause**, **Stop**, **Previous**, and **Next** to control playback.
+
+### Read selected text
+
+1. Select text on a supported page.
+2. Right-click the selection.
+3. Choose **Read selected text**.
+
+### Pick a custom start position
+
+1. Open the side panel.
+2. Click **Pick Start Position**.
+3. Click the paragraph where reading should begin.
+
+### Adjust playback
+
+- Choose a voice from the voice selector
+- Change reading speed with the rate slider
+- Reopen the same page later to continue from the saved paragraph
+
+## Keyboard Shortcuts
+
+| Action | Windows / Linux | macOS |
+| --- | --- | --- |
+| Toggle play or pause | `Ctrl+Shift+Space` | `Command+Shift+Space` |
+| Next paragraph | `Ctrl+Shift+.` | `Command+Shift+.` |
+| Previous paragraph | `Ctrl+Shift+,` | `Command+Shift+,` |
+
+## How It Works
+
+Chrome TTS Reader uses a standard Manifest V3 split:
+
+- `background` service worker manages playback state, Chrome TTS integration, shortcuts, and context menu actions
+- `content` script extracts readable text, supports start-position picking, and manages in-page highlighting
+- `sidepanel` UI provides persistent controls for reading and playback settings
+- `shared` modules keep contracts, storage helpers, and text utilities consistent across extension parts
+
+## Project Structure
+
+```text
+public/            Static extension assets, including the manifest
+src/background/    Service worker and playback orchestration
+src/content/       Text extraction, highlight, and start-position picking
+src/sidepanel/     Side panel UI and interactions
+src/shared/        Shared contracts, storage helpers, and utilities
+tests/             Unit tests for playback, extraction, picking, and shared logic
+```
+
+## Development
+
+### Commands
+
+- `npm run build` — build the unpacked extension into `dist/`
+- `npm run dev` — rebuild on file changes
+- `npm test` — run the test suite
+
+### Stack
+
+- TypeScript
+- Vite
+- Vitest
+- Chrome Extensions Manifest V3
+- `@mozilla/readability` for article-style extraction support
+
+## Limitations
+
+- Chrome only for now
+- Best suited to article, blog, and documentation pages
+- Heuristic extraction may be less accurate on highly dynamic or app-like pages
+- Restricted pages such as `chrome://` are not supported
+- No cloud TTS providers
+- No AI summarization, translation, or rewriting
+
+## Roadmap
+
+- Publish packaged releases for easier installation
+- Prepare Chrome Web Store distribution
+- Improve extraction quality on more complex layouts
+- Expand compatibility across a broader range of content-heavy pages
+
+## License
+
+Chrome TTS Reader is licensed under the Apache License 2.0.
+See [LICENSE](./LICENSE) for the full license text.
